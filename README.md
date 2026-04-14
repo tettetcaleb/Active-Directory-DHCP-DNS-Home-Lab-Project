@@ -6,7 +6,11 @@ Active Directory (AD) is a directory service developed by Microsoft that acts as
 
 Lab Setup
 
-To simulate a real enterprise environment, I created two virtual machines. One running Windows Server 2022 which acts as the Domain Controller, and one running Windows 10 which acts as the client machine.
+To simulate a real enterprise environment, I created two virtual machines. 
+-One running Windows Server 2022 which acts as the Domain Controller 
+-One running Windows 10 which acts as the client machine.
+![Screenshot](screenshots/Screenshot-2026-04-14-053255.png)
+
 Installing Remote Server Administration Tools (RSAT)
 Before managing Active Directory from the client machine, I installed the Remote Server Administration Tools on the Windows 10 VM. This gave me access to the Active Directory Users and Computers console.
 
@@ -17,19 +21,25 @@ On the Windows Server VM, I installed the Active Directory Domain Services role 
 
 Connecting the Two VMs
 
-Initially the Windows 10 machine could not reach the domain controller due to a network configuration issue. I resolved this by first creating a Nat network in VirtualBox and setting both VMs to the same Nat Network in VirtualBox and updating the DNS server address on the Windows 10 machine to point to the server's IP address.
+Initially the Windows 10 machine could not reach the domain controller due to a network configuration issue. I resolved this by:
+-Creating a Nat network in VirtualBox    ![Screenshot](screenshots/Screenshot-2026-04-14-053512.png) 
+-Setting both VMs to the same Nat Network in VirtualBox  ![Screenshot](screenshots/Screenshot-2026-04-14-053602.png)  
+-Updating the DNS server address on the Windows 10 machine to point to the server's IP address.
 
 Joining the Domain
-On the Windows 10 VM I navigated to System Advanced Settings and changed the domain to mylab.local, successfully joining the client machine to the domain.
+On the Windows 10 VM I navigated to System Advanced Settings and changed the domain to mylab.local, successfully joining the client machine to the domain.![Screenshot](screenshots/Screenshot-2026-04-14-053757.png)
+
 Creating a User Account
+
 On the Windows Server I opened Active Directory Users and Computers and created a new user named Caleb, granting it administrative privileges on the domain.
 
 Remote Computer Management
 
-After joining the domain I was able to access Computer Management on the Windows 10 machine remotely from the server, demonstrating centralized management capabilities.
+After joining the domain I was able to access Computer Management on the Windows 10 machine remotely from the server, demonstrating centralized management capabilities. ![Screenshot](screenshots/Screenshot-2026-04-14-054121.png)
 
 Group policy object
-In my domain computer i added a new group called HR which has certain restrictions and ability to intall new software. This is very usefull and allows me to group people working togerther depending on what restrictions and accesses they need
+
+In my domain computer i added a new group called HR which has certain restrictions and ability to intall new software. This is very usefull and allows me to group people working togerther depending on what restrictions and accesses they need.  ![Screenshot](screenshots/Screenshot-2026-04-14-053048.png)
 
 Next Steps
 I plan to configure DHCP to automatically assign IP addresses to domain joined machines and explore Group Policy Objects to push settings across the domain.
