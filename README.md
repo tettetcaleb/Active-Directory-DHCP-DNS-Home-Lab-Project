@@ -41,5 +41,17 @@ Group policy object
 
 In my domain computer i added a new group called HR which has certain restrictions and ability to intall new software. This is very usefull and allows me to group people working togerther depending on what restrictions and accesses they need.  ![Screenshot](screenshots/Screenshot-2026-04-14-053048.png)
 
-Next Steps
-I plan to configure DHCP to automatically assign IP addresses to domain joined machines and explore Group Policy Objects to push settings across the domain.
+DYNAMIC HOST CONFIGURATION PROTOCOL
+
+SCOPE - IP address range that is used for a DHCP server
+To create a new scope i had to:
+- install DHCP on my windows server
+- create the new scope
+
+Address Pool – The range of IP addresses available to be leased out to clients (e.g., 10.0.2.0 range).
+
+Address Leases – Shows currently active leases; which clients have been assigned an IP, their hostnames, and lease expiration times.
+
+Reservations – Lets you permanently assign a specific IP to a device based on its MAC address, so it always gets the same IP.
+`
+
