@@ -9,7 +9,7 @@ Lab Setup
 To simulate a real enterprise environment, I created two virtual machines. 
 -One running Windows Server 2022 which acts as the Domain Controller 
 -One running Windows 10 which acts as the client machine.
-![Screenshot](screenshots/Screenshot 2026-04-14 053255.png)
+![Screenshot](screenshots/Screenshot-2026-04-14-053255.png)
 
 Installing Remote Server Administration Tools (RSAT)
 Before managing Active Directory from the client machine, I installed the Remote Server Administration Tools on the Windows 10 VM. This gave me access to the Active Directory Users and Computers console.
