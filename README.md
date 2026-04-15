@@ -53,5 +53,7 @@ Address Pool – The range of IP addresses available to be leased out to clients
 Address Leases – Shows currently active leases; which clients have been assigned an IP, their hostnames, and lease expiration times.
 
 Reservations – Lets you permanently assign a specific IP to a device based on its MAC address, so it always gets the same IP.
+
+next is to assigh an IP address to a specific mac-address through DHCP
 `
 
