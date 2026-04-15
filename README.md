@@ -42,11 +42,15 @@ Group policy object
 In my domain computer i added a new group called HR which has certain restrictions and ability to intall new software. This is very usefull and allows me to group people working togerther depending on what restrictions and accesses they need.  ![Screenshot](screenshots/Screenshot-2026-04-14-053048.png)
 
 DYNAMIC HOST CONFIGURATION PROTOCOL
+First was to set us DHCP on my windows server
+![Screenshot](screenshots/Screenshot-2026-04-14-073517.png)
 
 SCOPE - IP address range that is used for a DHCP server
 To create a new scope i had to:
 - install DHCP on my windows server
 - create the new scope
+  ![Screenshot](screenshots/Screenshot-2026-04-15-025535.png)
+
 
 Address Pool – The range of IP addresses available to be leased out to clients (e.g., 10.0.2.0 range).
 
@@ -54,6 +58,7 @@ Address Leases – Shows currently active leases; which clients have been assign
 
 Reservations – Lets you permanently assign a specific IP to a device based on its MAC address, so it always gets the same IP.
 
-next is to assigh an IP address to a specific mac-address through DHCP
-`
+Next is to assigh an IP address to a specific mac-address through DHCP
+For this example i uesd a random mac address from the internet
+ ![Screenshot](screenshots/Screenshot-2026-04-14-074103.png)
 
