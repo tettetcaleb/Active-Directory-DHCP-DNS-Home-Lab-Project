@@ -91,3 +91,30 @@ Internal Networks – Resolves local hostnames (e.g., mylab.local) within a priv
 Load Balancing – Can point one domain to multiple IPs to distribute traffic
 
 Security (DNSSEC) – Validates DNS responses to prevent spoofing attacks
+
+Assigning a Static IP to My Domain Through DNS
+
+In this step, I assigned a static IP address to my Windows Server and configured it to act as the DNS server for my mylab.local domain. This ensures that all clients on the network can always find the server at a known, fixed address.
+ ![Screenshot](screenshots/Screenshot-2026-04-15-033620.png)
+
+
+DNS A Record
+
+ An A record (Address record) is the most basic DNS record — it maps a hostname to an IPv4 address.
+
+ How I created an a record for my printer :
+
+-Open DNS Manager on my Windows Server
+
+- Forward Lookup Zones
+
+-Click on mylab.local
+
+-Right-click in the right pane → New Host (A or AAAA)
+-Fill in:
+-Name: NetworkPrinter
+-IP Address: e.g. 10.0.2.20
+-Check "Create associated PTR record" 
+- Add Host
+
+ ![Screenshot](screenshots/Screenshot-2026-04-15-034506.png)
