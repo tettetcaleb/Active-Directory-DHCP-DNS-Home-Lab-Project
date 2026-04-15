@@ -64,3 +64,30 @@ Next is to assigh an IP address to a specific mac-address through DHCP
 For this example i uesd a random mac address from the internet
  ![Screenshot](screenshots/Screenshot-2026-04-14-074103.png)
 
+
+
+DNS (Domain Name System)
+
+DNS is essentially the phonebook of the internet — it translates human-readable domain names (like google.com) into IP addresses (like 142.250.80.46) that computers use to communicate.
+
+How it Works
+
+You type google.com in your browser
+Your computer asks a DNS server "what's the IP for google.com?"
+The DNS server responds with the IP address
+Your computer connects to that IP
+
+
+Key Uses
+
+Name Resolution – Converts hostnames to IPs and vice versa
+
+Website Browsing – Every website visit starts with a DNS lookup
+
+Email Routing – MX records tell mail servers where to deliver email
+
+Internal Networks – Resolves local hostnames (e.g., mylab.local) within a private network
+
+Load Balancing – Can point one domain to multiple IPs to distribute traffic
+
+Security (DNSSEC) – Validates DNS responses to prevent spoofing attacks
